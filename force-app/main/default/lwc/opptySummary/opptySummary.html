@@ -20,8 +20,32 @@
             </header>
         </div>
         <div class="slds-card__body slds-card__body_inner">
-            Product Record Type ID: {productRTId} <br/> 
-            Service Record Type ID: {serviceRTId}
+            <div class="slds-grid slds-gutters slds-wrap">
+                <div class="slds-col" style="padding-top: 1em">
+                  <div class="slds-grid">
+                    <div class="slds-col slds-size_1-of-2">
+                      <p>
+                        <strong>Total of Product Opptys:</strong><br />
+                        <lightning-formatted-number
+                          value={totalOpportunityProducts.data}
+                          format-style="currency"
+                          currency-code="BRL"
+                        ></lightning-formatted-number>
+                      </p>
+                    </div>
+                    <div class="slds-col slds-size_1-of-2">
+                      <p>
+                        <strong>Total Service Opptys:</strong><br />
+                        <lightning-formatted-number
+                          value={totalOpptyService.data}
+                          format-style="currency"
+                          currency-code="BRL"
+                        ></lightning-formatted-number>
+                      </p>
+                    </div>
+                  </div>
+                </div>
+            </div>
         </div>
     </article>
 </template>
